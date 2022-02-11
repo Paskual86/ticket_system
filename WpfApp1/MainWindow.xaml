@@ -1,0 +1,411 @@
+﻿<mah:MetroWindow x:Class="TicketSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                 xmlns:classes="clr-namespace:TicketSystem.Classes"
+                 mc:Ignorable="d"
+        Title="{Binding TitleText}" MinWidth="850" MinHeight="600" Height="650" Width="850">
+	<mah:MetroWindow.RightWindowCommands>
+		<mah:WindowCommands>
+			<StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+				<ComboBox Margin="2" Width="120" Name="comboBoxTheme" IsTabStop="False">
+					<ComboBox.ItemTemplate>
+						<DataTemplate DataType="classes:AppThemeMenuData">
+							<StackPanel Orientation="Horizontal">
+								<Border CornerRadius="45" Width="15" Height="15" Background="{Binding ColorBrush}"/>
+								<TextBlock Text="{Binding Name}" Style="{DynamicResource CommonTextStyle}"/>
+							</StackPanel>
+						</DataTemplate>
+					</ComboBox.ItemTemplate>
+				</ComboBox>
+				<ComboBox Margin="2" Width="120" Name="comboBoxAccent" IsTabStop="False">
+					<ComboBox.ItemTemplate>
+						<DataTemplate DataType="classes:AccentColorMenuData">
+							<StackPanel Orientation="Horizontal">
+								<Border CornerRadius="45" Width="15" Height="15" Background="{Binding ColorBrush}"/>
+								<TextBlock Text="{Binding Name}" Style="{DynamicResource CommonTextStyle}"/>
+							</StackPanel>
+						</DataTemplate>
+					</ComboBox.ItemTemplate>
+				</ComboBox>
+
+			</StackPanel>
+		</mah:WindowCommands>
+	</mah:MetroWindow.RightWindowCommands>
+	<Grid>
+		<Grid Name="containerGrid">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="60"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Border Background="{DynamicResource AccentColorBrush4}">
+				<Grid>
+					<DockPanel Name="dashboard" Visibility="Collapsed" LastChildFill="False">
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="0">
+							<DockPanel>
+								<iconPacks:PackIconOcticons Kind="Dashboard" HorizontalAlignment="Stretch" Width="26" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Dashboard" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="1">
+							<DockPanel>
+								<iconPacks:PackIconMaterial Kind="TicketConfirmation" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Tickets" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="22">
+							<DockPanel>
+								<iconPacks:PackIconMaterial Kind="Account" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Users" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="23">
+							<DockPanel>
+								<iconPacks:PackIconMaterial Kind="FormatListCheckbox" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Items" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="24">
+							<DockPanel>
+								<iconPacks:PackIconMaterial Kind="ChartBar" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Charts" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="50">
+                            <DockPanel>
+                                <iconPacks:PackIconMaterial Kind="Newspaper" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+                                <TextBlock Text="Magazine" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Right" Command="{Binding DashboardCommand}" CommandParameter="6">
+							<DockPanel>
+								<iconPacks:PackIconMaterial Kind="ExitToApp" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Log Out" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+
+					</DockPanel>
+					<DockPanel Name="dashboardGroups" Visibility="Collapsed" LastChildFill="False">
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="40"
+								Margin="5,2,25,2">
+							<DockPanel>
+								<iconPacks:PackIconFontAwesome Kind="ArrowAltCircleLeftSolid" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Back" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="3">
+							<DockPanel>
+								<iconPacks:PackIconEntypo Kind="CircleWithPlus" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Create" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding ModifyGroupCommand}" CommandParameter="4">
+							<DockPanel>
+								<iconPacks:PackIconEntypo Kind="CircleWithMinus" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Delete" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding ModifyGroupCommand}" CommandParameter="5">
+							<DockPanel>
+								<iconPacks:PackIconFontAwesome Kind="PenSquareSolid" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Edit" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding ModifyGroupCommand}" CommandParameter="7">
+							<DockPanel>
+								<iconPacks:PackIconFontAwesome Kind="CopyRegular" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Duplicate" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+					</DockPanel>
+					<DockPanel Name="dashboardTickets" Visibility="Collapsed" LastChildFill="False">
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="2"
+								Margin="5,2,25,2">
+							<DockPanel>
+								<iconPacks:PackIconFontAwesome Kind="ArrowAltCircleLeftSolid" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Back" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="10">
+							<DockPanel>
+								<iconPacks:PackIconEntypo Kind="CircleWithPlus" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Create" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding ModifyTicketCommand}" CommandParameter="11">
+							<DockPanel>
+								<iconPacks:PackIconEntypo Kind="CircleWithMinus" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Delete" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding ModifyTicketCommand}" CommandParameter="12">
+							<DockPanel>
+								<iconPacks:PackIconFontAwesome Kind="PenSquareSolid" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Edit" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding ModifyTicketCommand}" CommandParameter="13">
+							<DockPanel>
+								<iconPacks:PackIconFontAwesome Kind="CopyRegular" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Duplicate" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="8" Margin="30,2,5,2">
+							<DockPanel>
+								<iconPacks:PackIconModern Kind="VectorGroup" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Groups" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Right" Command="{Binding DashboardCommand}" CommandParameter="14">
+							<DockPanel>
+								<iconPacks:PackIconFontAwesome Kind="InfoCircleSolid" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Help" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+					</DockPanel>
+					<DockPanel Name="dashboardUsers" Visibility="Collapsed" LastChildFill="False">
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="2"
+								Margin="5,2,25,2">
+							<DockPanel>
+								<iconPacks:PackIconFontAwesome Kind="ArrowAltCircleLeftSolid" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Back" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="25">
+							<DockPanel>
+								<iconPacks:PackIconEntypo Kind="CircleWithPlus" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Create" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DeleteUserCommand}" CommandParameter="26">
+							<DockPanel>
+								<iconPacks:PackIconEntypo Kind="CircleWithMinus" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Delete" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding ModifyUserCommand}" CommandParameter="27">
+							<DockPanel>
+								<iconPacks:PackIconFontAwesome Kind="PenSquareSolid" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Edit" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding ModifyUserCommand}" CommandParameter="28">
+							<DockPanel>
+								<iconPacks:PackIconFontAwesome Kind="CopyRegular" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Duplicate" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="29" Margin="30,2,5,2"
+						        Width="80">
+							<DockPanel>
+								<iconPacks:PackIconMaterial Kind="ClockOutline" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Working time" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+					</DockPanel>
+					<DockPanel Name="dashboardWorkTimes" Visibility="Collapsed" LastChildFill="False">
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="30"
+								Margin="5,2,25,2">
+							<DockPanel>
+								<iconPacks:PackIconFontAwesome Kind="ArrowAltCircleLeftSolid" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Back" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="31">
+							<DockPanel>
+								<iconPacks:PackIconMaterial Kind="Printer" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Print" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Right" Command="{Binding DashboardCommand}" CommandParameter="14">
+							<DockPanel>
+								<iconPacks:PackIconFontAwesome Kind="InfoCircleSolid" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Help" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+					</DockPanel>
+					<DockPanel Name="dashboardItems" Visibility="Collapsed" LastChildFill="False">
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="2"
+								Margin="5,2,25,2">
+							<DockPanel>
+								<iconPacks:PackIconFontAwesome Kind="ArrowAltCircleLeftSolid" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Back" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="32">
+							<DockPanel>
+								<iconPacks:PackIconEntypo Kind="CircleWithPlus" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Create" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding ModifyItemCommand}" CommandParameter="33">
+							<DockPanel>
+								<iconPacks:PackIconEntypo Kind="CircleWithMinus" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Delete" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding ModifyItemCommand}" CommandParameter="34">
+							<DockPanel>
+								<iconPacks:PackIconFontAwesome Kind="PenSquareSolid" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Edit" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding ModifyItemCommand}" CommandParameter="35">
+							<DockPanel>
+								<iconPacks:PackIconFontAwesome Kind="CopyRegular" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Duplicate" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+					</DockPanel>
+					<DockPanel Name="dashboardCharts" Visibility="Collapsed" LastChildFill="False">
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="2"
+								Margin="5,2,25,2">
+							<DockPanel>
+								<iconPacks:PackIconFontAwesome Kind="ArrowAltCircleLeftSolid" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+								<TextBlock Text="Back" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+					</DockPanel>
+
+                    <DockPanel Name="dashboardMagazine" Visibility="Collapsed" LastChildFill="False">
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="51">
+                            <DockPanel>
+                                <iconPacks:PackIconEntypo Kind="CircleWithPlus" HorizontalAlignment="Stretch" Width="30" Height="20" DockPanel.Dock="Top" />
+                                <TextBlock TextWrapping="Wrap" Text="   Add Product"  HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding MagazineCommand}" CommandParameter="52">
+                            <DockPanel>
+                                <iconPacks:PackIconEntypo Kind="CircleWithMinus" HorizontalAlignment="Stretch" VerticalAlignment="Center" Width="30" Height="20" DockPanel.Dock="Top" />
+                                <TextBlock HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap" Text=" Delete Product" >
+                                </TextBlock>
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding MagazineCommand}" CommandParameter="53">
+                            <DockPanel>
+                                <iconPacks:PackIconFontAwesome Kind="PenSquareSolid" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+                                <TextBlock Text="Edit" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding MagazineCommand}" CommandParameter="54">
+                            <DockPanel>
+                                <iconPacks:PackIconFontAwesome Kind="CopyRegular" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+                                <TextBlock Text="Duplicate" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="2">
+                            <DockPanel>
+                                <iconPacks:PackIconMaterial Kind="Cancel" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" 
+								                            Foreground="Red"/>
+                                <TextBlock Text="Cancel" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="56">
+                            <DockPanel>
+                                <iconPacks:PackIconFontAwesome Kind="FileAltSolid" HorizontalAlignment="Stretch" Width="30" Height="20" DockPanel.Dock="Top" />
+                                <TextBlock HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap" Text=" Magazine Documents">
+                                </TextBlock>
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding MagazineCommand}" CommandParameter="57">
+                            <DockPanel>
+                                <iconPacks:PackIconMaterial Kind="Printer" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+                                <TextBlock Text="Print" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                        
+                    </DockPanel>
+
+                    <DockPanel Name="dashboardProduct" Visibility="Collapsed" LastChildFill="False">
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="60">
+                            <DockPanel>
+                                <iconPacks:PackIconEntypo Kind="CircleWithPlus" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+                                <TextBlock Text="Create" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DeleteProductCommand}" CommandParameter="61">
+                            <DockPanel>
+                                <iconPacks:PackIconEntypo Kind="CircleWithMinus" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+                                <TextBlock Text="Delete"  HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding ModifyProductCommand}" CommandParameter="62">
+                            <DockPanel>
+                                <iconPacks:PackIconFontAwesome Kind="PenSquareSolid" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+                                <TextBlock Text="Edit" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding ModifyProductCommand}" CommandParameter="63">
+                            <DockPanel>
+                                <iconPacks:PackIconFontAwesome Kind="CopyRegular" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+                                <TextBlock Text="Duplicate" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="65">
+                            <DockPanel>
+                                <iconPacks:PackIconMaterial Kind="CheckboxMarkedCircle" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" 
+								                            Foreground="Green"/>
+                                <TextBlock Text="Accept" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="64">
+                            <DockPanel>
+                                <iconPacks:PackIconMaterial Kind="Cancel" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" 
+								                            Foreground="Red"/>
+                                <TextBlock Text="Cancel" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                    </DockPanel>
+
+                    <DockPanel Name="dashboardProductBuy" Visibility="Collapsed" LastChildFill="False">
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="80">
+                            <DockPanel>
+                                <iconPacks:PackIconMaterial Kind="CheckboxMarkedCircle" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+                                <TextBlock Text="Accept" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding DashboardCommand}" CommandParameter="81">
+                            <DockPanel>
+                                <iconPacks:PackIconMaterial Kind="Cancel" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" 
+								                            Foreground="Red"/>
+                                <TextBlock Text="Cancel" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding MagazineCommand}" CommandParameter="77">
+                            <DockPanel>
+                                <iconPacks:PackIconMaterial Kind="Printer" HorizontalAlignment="Stretch" Width="30" Height="25" DockPanel.Dock="Top" />
+                                <TextBlock TextWrapping="Wrap" Text="Print receipt" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding MagazineCommand}" CommandParameter="78">
+                            <DockPanel>
+                                <iconPacks:PackIconMaterial Kind="Printer" HorizontalAlignment="Stretch" Width="30" Height="25" DockPanel.Dock="Top" />
+                                <TextBlock TextWrapping="Wrap" Text="Print invoice" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                    </DockPanel>
+                </Grid>
+			</Border>
+			<Grid Name="container" Margin="3" Grid.Row="1"/>
+		</Grid>
+	    <Border Grid.Row="0"  Opacity=".8" Name="blackPanel" Visibility="Collapsed">
+			<Border.Background>
+				<SolidColorBrush Opacity="0.7" Color="{StaticResource BlackColor}" />
+			</Border.Background>
+	    </Border>
+	    <Grid Row="0" Name="dialogContainer" Margin="40" Grid.RowSpan="2"/>
+	</Grid>
+</mah:MetroWindow>

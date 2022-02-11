@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="TicketSystem.Controls.Dialogs.CreateTicketGroupView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+		VerticalAlignment="Center"
+        Width="400">
+	<Border BorderBrush="{DynamicResource TextBoxBorderBrush}" BorderThickness="1" Background="{DynamicResource WindowBackgroundBrush}">
+		<Border.Effect>
+			<DropShadowEffect Opacity=".3"/>
+		</Border.Effect>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="30"/>
+				<RowDefinition Height="60"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+
+			<TextBlock Text="Create or Edit ticket group" Grid.Row="0" Grid.Column="0" Style="{DynamicResource CommonTextStyle}" MinWidth="80"
+			           FontSize="18" FontWeight="Bold"/>
+
+			<Border Grid.Row="1" Background="{DynamicResource AccentColorBrush4}">
+				<Grid>
+					<DockPanel LastChildFill="False">
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding AcceptCommand}">
+							<DockPanel>
+								<iconPacks:PackIconMaterial Kind="CheckboxMarkedCircle" HorizontalAlignment="Stretch" Width="26" Height="30" DockPanel.Dock="Top" 
+								                            Foreground="Green"/>
+								<TextBlock Text="Accept" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding CancelCommand}">
+							<DockPanel>
+								<iconPacks:PackIconMaterial Kind="Cancel" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" 
+								                            Foreground="Red"/>
+								<TextBlock Text="Cancel" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+					</DockPanel>
+				</Grid>
+			</Border>
+
+			<DockPanel Grid.Row="2" LastChildFill="False" Margin="15">
+				<DockPanel DockPanel.Dock="Top">
+					<TextBlock Text="Group Name" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+					<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding GroupData.Name, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+					         Name="textBox"/>
+				</DockPanel>
+				<DockPanel DockPanel.Dock="Top">
+					<TextBlock Text="Description" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+					<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding GroupData.Description, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+				</DockPanel>
+			</DockPanel>
+
+		</Grid>
+	</Border>
+</UserControl>

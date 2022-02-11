@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="TicketSystem.Controls.WorkTimesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<DockPanel Grid.Row="0">
+			<ComboBox Style="{DynamicResource CommonComboBoxStyle}" Width="120" Name="idComboBox" ItemsSource="{Binding WorkItemsIdFiltersList, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedWorkItemsIdFilter}"
+			          mah:TextBoxHelper.Watermark="User ID"/>
+			<ComboBox Style="{DynamicResource CommonComboBoxStyle}" Width="120" Name="snComboBox" ItemsSource="{Binding WorkItemsSurenameFiltersList, UpdateSourceTrigger=PropertyChanged}" Text="{Binding SelectedWorkItemsSurenameFilter}"
+			          IsEditable="True"/>
+			<ComboBox Style="{DynamicResource CommonComboBoxStyle}" Width="120" Name="fnComboBox" ItemsSource="{Binding WorkItemsFirstnameFiltersList, UpdateSourceTrigger=PropertyChanged}" Text="{Binding SelectedWorkItemsFirstnameFilter}"
+			          IsEditable="True"/>
+			<TextBlock Text="Filter" VerticalAlignment="Center" Margin="3"/>
+		</DockPanel>
+	    <DataGrid ItemsSource="{Binding WorkTimeFilteredCollection}" AutoGenerateColumns="False" Grid.Row="1"				  
+	              CanUserAddRows="False" CanUserResizeRows="False" EnableRowVirtualization="True"
+	              HeadersVisibility="Column" IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow"
+	              ColumnWidth="*" AlternatingRowBackground="{DynamicResource AccentColorBrush4}" Name="dataGrid">
+		    <DataGrid.Columns>
+			    <DataGridTextColumn Binding="{Binding UserItemID}" Header="User ID"/>
+			    <DataGridTextColumn Binding="{Binding UserItem.Surname}" Header="Surname"/>
+			    <DataGridTextColumn Binding="{Binding UserItem.Firstname}" Header="Firstname"/>
+			    <DataGridTextColumn Binding="{Binding DateDisplay}" Header="Date"/>
+			    <DataGridTextColumn Binding="{Binding StartHourDisplay}" Header="Start Hour"/>
+			    <DataGridTextColumn Binding="{Binding EndHourDisplay}" Header="End Hour"/>
+			    <DataGridTextColumn Binding="{Binding TotalHours}" Header="Total Hours"/>
+		    </DataGrid.Columns>
+	    </DataGrid>
+    </Grid>
+</UserControl>

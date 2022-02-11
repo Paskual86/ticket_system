@@ -1,0 +1,370 @@
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\Dialogs\CreateTicketGroupView.baml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\MainView.baml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\MainWindow.baml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Styles\StyleOverrides.baml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\App.baml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\Dialogs\CreateTicketGroupView.g.cs
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\Dialogs\CreateTicketView.g.cs
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\MainView.g.cs
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\TicketGroupsView.g.cs
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\TicketsView.g.cs
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\MainWindow.g.cs
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\App.g.cs
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\TicketSystem_MarkupCompile.cache
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\TicketSystem_MarkupCompile.lref
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\TicketSystem.exe.config
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\TicketSystem.exe
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\TicketSystem.pdb
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\ControlzEx.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\EntityFramework.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\MahApps.Metro.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\SQLite.CodeFirst.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.Data.SQLite.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.Windows.Interactivity.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\ControlzEx.pdb
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\EntityFramework.xml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\MahApps.Metro.pdb
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\MahApps.Metro.xml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.pdb
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.xml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.Data.SQLite.xml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.Data.SQLite.dll.config
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\Dialogs\CreateTicketView.baml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\TicketGroupsView.baml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\TicketsView.baml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Styles\ControlStyles.baml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\TicketSystem.g.resources
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\TicketSystem.Properties.Resources.resources
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\TicketSystem2.csproj.GenerateResource.cache
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\TicketSystem2.csproj.CoreCompileInputs.cache
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\TicketSystem2.csproj.CopyComplete
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\TicketSystem.exe
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\TicketSystem.pdb
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\Dialogs\RegisterView.g.cs
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\Dialogs\RegisterView.baml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\TicketSystem2.csprojAssemblyReference.cache
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\Dialogs\CreateUserView.g.cs
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\Dialogs\CreateUserView.baml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\UsersView.g.cs
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\UsersView.baml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\WorkTimesView.baml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\WorkTimesView.g.cs
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\ItemsView.baml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\Dialogs\CreateItemView.g.cs
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\ItemsView.g.cs
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\Dialogs\CreateItemView.baml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\InteractiveDataDisplay.WPF.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.Reactive.Core.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.Reactive.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.Reactive.Linq.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.ValueTuple.dll
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\InteractiveDataDisplay.WPF.pdb
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.Reactive.xml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.Reactive.Core.xml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.Reactive.Linq.xml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\bin\Debug\System.ValueTuple.xml
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\ChartsView.g.cs
+D:\Projects\Freelance\TicketsAnna\TicketSystem\WpfApp1\obj\Debug\Controls\ChartsView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\TicketSystem.exe.config
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\TicketSystem.exe
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\TicketSystem.pdb
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\ControlzEx.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\EntityFramework.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\EntityFramework.SqlServer.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\InteractiveDataDisplay.WPF.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\SQLite.CodeFirst.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.Data.SQLite.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.Reactive.Core.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.Reactive.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.Reactive.Linq.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.ValueTuple.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.Windows.Interactivity.dll
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\ControlzEx.pdb
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\EntityFramework.xml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\EntityFramework.SqlServer.xml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\InteractiveDataDisplay.WPF.pdb
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.pdb
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.xml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.pdb
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.xml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.Data.SQLite.xml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.Data.SQLite.dll.config
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.Reactive.xml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.Reactive.Core.xml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.Reactive.Linq.xml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\bin\Debug\System.ValueTuple.xml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateProduct.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateTicketGroupView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\MainView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\ItemsView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\WorkTimesView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\UsersView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Styles\StyleOverrides.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\App.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\BarEditView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateItemView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateMagazineDocument.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateProduct.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateUserView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateTicketGroupView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateTicketView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\RegisterView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\SelectedProductQuantity.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\MagazineView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\MainView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\ItemsView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\ChartsView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\ProductMagazineView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\ProductView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\SaleProductBuyView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\WorkTimesView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\UsersView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\TicketGroupsView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\TicketsView.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\MainWindow.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\App.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\TicketSystem_MarkupCompile.cache
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\TicketSystem_MarkupCompile.lref
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\BarEditView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateItemView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateMagazineDocument.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateUserView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateTicketView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\RegisterView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\SelectedProductQuantity.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\MagazineView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\ChartsView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\ProductMagazineView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\ProductView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\SaleProductBuyView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\TicketGroupsView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\TicketsView.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\MainWindow.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Styles\ControlStyles.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\TicketSystem.g.resources
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\TicketSystem.Properties.Resources.resources
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\TicketSystem2.csproj.GenerateResource.cache
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\TicketSystem2.csproj.CoreCompileInputs.cache
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\TicketSystem2.csproj.CopyComplete
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\TicketSystem.exe
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\TicketSystem.pdb
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateProductMagazine.g.cs
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateProductMagazine.baml
+D:\Workspace\Developments\AzureDevOps\ticket_system\WpfApp1\obj\Debug\TicketSystem2.csprojAssemblyReference.cache
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\TicketSystem.exe.config
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\TicketSystem.exe
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\TicketSystem.pdb
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\ControlzEx.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\EntityFramework.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\EntityFramework.SqlServer.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\InteractiveDataDisplay.WPF.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\SQLite.CodeFirst.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Data.SQLite.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Reactive.Core.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Reactive.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Reactive.Linq.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.ValueTuple.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Windows.Interactivity.dll
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\ControlzEx.pdb
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\EntityFramework.xml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\EntityFramework.SqlServer.xml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\InteractiveDataDisplay.WPF.pdb
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.pdb
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.xml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.pdb
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.xml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Data.SQLite.xml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Data.SQLite.dll.config
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Reactive.xml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Reactive.Core.xml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Reactive.Linq.xml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.ValueTuple.xml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem2.csprojAssemblyReference.cache
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateProduct.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateProductMagazine.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateTicketGroupView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\MainView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\ItemsView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\WorkTimesView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\UsersView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Styles\StyleOverrides.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\App.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\BarEditView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateItemView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateMagazineDocument.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateProduct.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateProductMagazine.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateUserView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateTicketGroupView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateTicketView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\RegisterView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\SelectedProductQuantity.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\MagazineView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\MainView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\ItemsView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\ChartsView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\ProductMagazineView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\ProductView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\SaleProductBuyView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\WorkTimesView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\UsersView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\TicketGroupsView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\TicketsView.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\MainWindow.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\App.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem_MarkupCompile.cache
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem_MarkupCompile.lref
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\BarEditView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateItemView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateMagazineDocument.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateUserView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateTicketView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\RegisterView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\SelectedProductQuantity.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\MagazineView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\ChartsView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\ProductMagazineView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\ProductView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\SaleProductBuyView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\TicketGroupsView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\TicketsView.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\MainWindow.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Styles\ControlStyles.baml
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem.g.resources
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem.Properties.Resources.resources
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem2.csproj.GenerateResource.cache
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem2.csproj.CoreCompileInputs.cache
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem2.csproj.CopyComplete
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem.exe
+D:\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem.pdb
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\TicketSystem.exe.config
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\TicketSystem.exe
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\TicketSystem.pdb
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\ControlzEx.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\EntityFramework.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\EntityFramework.SqlServer.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\InteractiveDataDisplay.WPF.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\SQLite.CodeFirst.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Data.SQLite.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Reactive.Core.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Reactive.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Reactive.Linq.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.ValueTuple.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Windows.Interactivity.dll
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\ControlzEx.pdb
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\EntityFramework.xml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\EntityFramework.SqlServer.xml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\InteractiveDataDisplay.WPF.pdb
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.pdb
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.xml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.pdb
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\MahApps.Metro.IconPacks.xml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Data.SQLite.xml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Data.SQLite.dll.config
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Reactive.xml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Reactive.Core.xml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Reactive.Linq.xml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\bin\Debug\System.ValueTuple.xml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem2.csproj.AssemblyReference.cache
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateProduct.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateProductMagazine.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateTicketGroupView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\MainView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\ItemsView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\WorkTimesView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\UsersView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Styles\StyleOverrides.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\App.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\BarEditView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateItemView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateMagazineDocument.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateProduct.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateProductMagazine.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateUserView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateTicketGroupView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateTicketView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\RegisterView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\SelectedProductQuantity.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\MagazineView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\MainView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\ItemsView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\ChartsView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\ProductMagazineView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\ProductView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\SaleProductBuyView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\WorkTimesView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\UsersView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\TicketGroupsView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\TicketsView.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\MainWindow.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\App.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem_MarkupCompile.cache
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem_MarkupCompile.lref
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\BarEditView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateItemView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateMagazineDocument.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateUserView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\CreateTicketView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\RegisterView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\Dialogs\SelectedProductQuantity.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\MagazineView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\ChartsView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\ProductMagazineView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\ProductView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\SaleProductBuyView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\TicketGroupsView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Controls\TicketsView.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\MainWindow.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\Styles\ControlStyles.baml
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem.g.resources
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem.Properties.Resources.resources
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem2.csproj.GenerateResource.cache
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem2.csproj.CoreCompileInputs.cache
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem2.csproj.CopyComplete
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem.exe
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\TicketSystem.pdb

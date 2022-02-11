@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="TicketSystem.Controls.Dialogs.CreateMagazineDocument"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:enums="clr-namespace:TicketSystem.Classes.Enums"
+             mc:Ignorable="d" 
+             VerticalAlignment="Center"
+        Width="500" d:DesignHeight="350">
+    <Border BorderBrush="{DynamicResource TextBoxBorderBrush}" 
+            BorderThickness="1" 
+            Background="{DynamicResource WindowBackgroundBrush}">
+        <Border.Effect>
+            <DropShadowEffect Opacity=".3"/>
+        </Border.Effect>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Magazine Documents" Grid.Row="0" Grid.Column="0" Style="{DynamicResource CommonTextStyle}" MinWidth="90"
+			           FontSize="18" FontWeight="Bold"/>
+
+            <Border Grid.Row="1" Background="{DynamicResource AccentColorBrush4}">
+                <Grid>
+                    <DockPanel LastChildFill="False">
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding AcceptCommand}">
+                            <DockPanel>
+                                <iconPacks:PackIconMaterial Kind="CheckboxMarkedCircle" HorizontalAlignment="Stretch" Width="26" Height="30" DockPanel.Dock="Top" 
+								                            Foreground="Green"/>
+                                <TextBlock Text="Accept" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding CancelCommand}">
+                            <DockPanel>
+                                <iconPacks:PackIconMaterial Kind="Cancel" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" 
+								                            Foreground="Red"/>
+                                <TextBlock Text="Cancel" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Right" Command="{Binding DashboardCommand}" CommandParameter="14">
+                            <DockPanel>
+                                <iconPacks:PackIconFontAwesome Kind="InfoCircleSolid" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+                                <TextBlock Text="Help" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+
+                    </DockPanel>
+                </Grid>
+            </Border>
+
+            <GroupBox Grid.Row="2" Header="Document Type" Margin="5">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,0">
+                    <RadioButton Content="External reception to magazine (PZ)" Margin="3" GroupName="documentType" 
+											 IsChecked="{Binding Path=DocumentType.Id, 
+                                                                    Converter={StaticResource DocumentTypeBooleanConverter}, 
+                                                                    ConverterParameter={x:Static enums:MagazineDocumentTypeEnum.dtPZ}, 
+                                                        Mode=TwoWay}"
+                        />
+                    
+                    <RadioButton Content="External issue from the magazine (WZ)" Margin="3" GroupName="documentType" 
+											 IsChecked="{Binding Path=DocumentType.Id, 
+                                                        Converter={StaticResource DocumentTypeBooleanConverter}, 
+                                                        ConverterParameter={x:Static enums:MagazineDocumentTypeEnum.dtWZ}, 
+                                                        Mode=TwoWay}" 
+											 />
+                    
+                    <RadioButton Content="Internal reception to the magazine (PW)" Margin="3" GroupName="documentType" 
+											 IsChecked="{Binding Path=DocumentType.Id, 
+                                                                Converter={StaticResource DocumentTypeBooleanConverter}, 
+                                                                ConverterParameter={x:Static enums:MagazineDocumentTypeEnum.dtPW}, 
+                                                                Mode=TwoWay}" 
+											 />
+                    
+                    <RadioButton Content="Internal expenditure from magazine (RW)" Margin="3" GroupName="documentType" 
+											 IsChecked="{Binding Path=DocumentType.Id, 
+                                                                    Converter={StaticResource DocumentTypeBooleanConverter}, 
+                                                                    ConverterParameter={x:Static enums:MagazineDocumentTypeEnum.dtRW}, 
+                                                                    Mode=TwoWay}" 
+											 />
+                    <RadioButton Content="Inventory (IN)" Margin="3" GroupName="documentType" 
+											 IsChecked="{Binding Path=DocumentType.Id, 
+                                                            Converter={StaticResource DocumentTypeBooleanConverter}, 
+                                                            ConverterParameter={x:Static enums:MagazineDocumentTypeEnum.dtIN}, 
+                                                            Mode=TwoWay}" 
+											 />
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+    </Border>
+</UserControl>

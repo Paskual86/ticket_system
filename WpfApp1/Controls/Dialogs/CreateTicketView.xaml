@@ -1,0 +1,309 @@
+﻿<UserControl x:Class="TicketSystem.Controls.Dialogs.CreateTicketView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:enums="clr-namespace:TicketSystem.Classes.Enums"
+             xmlns:classes="clr-namespace:TicketSystem.Classes"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="800" Margin="20">
+	<UserControl.Resources>
+	</UserControl.Resources>
+		<Border BorderBrush="{DynamicResource TextBoxBorderBrush}" BorderThickness="1" Background="{DynamicResource WindowBackgroundBrush}">
+			<Border.Effect>
+				<DropShadowEffect Opacity=".3"/>
+			</Border.Effect>
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="30"/>
+					<RowDefinition Height="60"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+
+				<TextBlock Text="Create or Edit ticket" Grid.Row="0" Grid.Column="0" Style="{DynamicResource CommonTextStyle}" MinWidth="80"
+				           FontSize="18" FontWeight="Bold"/>
+
+				<Border Grid.Row="1" Background="{DynamicResource AccentColorBrush4}">
+					<Grid>
+						<DockPanel LastChildFill="False">
+							<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding AcceptCommand}">
+								<DockPanel>
+									<iconPacks:PackIconMaterial Kind="CheckboxMarkedCircle" HorizontalAlignment="Stretch" Width="26" Height="30" DockPanel.Dock="Top" 
+									                            Foreground="Green"/>
+									<TextBlock Text="Accept" HorizontalAlignment="Center" />
+								</DockPanel>
+							</Button>
+							<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding CancelCommand}">
+								<DockPanel>
+									<iconPacks:PackIconMaterial Kind="Cancel" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" 
+									                            Foreground="Red"/>
+									<TextBlock Text="Cancel" HorizontalAlignment="Center" />
+								</DockPanel>
+							</Button>
+						</DockPanel>
+					</Grid>
+				</Border>
+
+				<ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="2">
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="*"/>
+							<RowDefinition Height="Auto"/>
+						</Grid.RowDefinitions>
+
+						<DockPanel Grid.Row="0" LastChildFill="False" Margin="20,15" >
+							<DockPanel DockPanel.Dock="Top">
+								<TextBlock Text="Ticket Name" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+								<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.Name, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+										 Name="textBox"/>
+							</DockPanel>
+							<DockPanel DockPanel.Dock="Top">
+								<TextBlock Text="Ticket type" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+								<ComboBox Style="{DynamicResource CommonComboBoxStyle}" DisplayMemberPath="Name" SelectedValuePath="ID" ItemsSource="{Binding GroupsList}" 
+										  SelectedValue="{Binding TicketData.GroupID}" SelectedItem="{Binding SelectedGroup, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+							</DockPanel>
+						</DockPanel>
+
+						<GroupBox Grid.Row="1" Header="Calculating time type" Margin="5">
+							<StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="100,0">
+								<RadioButton Content="Minute" Margin="3" GroupName="timeType" 
+											 IsChecked="{Binding Path=TicketData.TimeType, Converter={StaticResource EnumBooleanConverter}, ConverterParameter={x:Static enums:TimerTypeEnum.Minute}, Mode=TwoWay}"
+											 Checked="ToggleButton_OnChecked"/>
+								<RadioButton Content="Intervals" Margin="3" GroupName="timeType" 
+											 IsChecked="{Binding Path=TicketData.TimeType, Converter={StaticResource EnumBooleanConverter}, ConverterParameter={x:Static enums:TimerTypeEnum.Interval}, Mode=TwoWay}" 
+											 Checked="ToggleButton_OnChecked"/>
+								<RadioButton Content="No limit" Margin="3" GroupName="timeType" 
+											 IsChecked="{Binding Path=TicketData.TimeType, Converter={StaticResource EnumBooleanConverter}, ConverterParameter={x:Static enums:TimerTypeEnum.NoLimit}, Mode=TwoWay}" 
+											 Checked="ToggleButton_OnChecked"/>
+							</StackPanel>
+						</GroupBox>
+
+						<GroupBox Grid.Row="2" Margin="5" Header="{Binding TimeTypeHeaderText, FallbackValue=No Limit}">
+							<Grid>
+								<DockPanel Visibility="{Binding TimerTypeMinuteVisibility, UpdateSourceTrigger=PropertyChanged, FallbackValue=Collapsed}" LastChildFill="False" Margin="10,0">
+										<Grid>
+											<Grid.ColumnDefinitions>
+												<ColumnDefinition Width="*"/>
+												<ColumnDefinition Width="*"/>
+											</Grid.ColumnDefinitions>
+											<Grid.RowDefinitions>
+												<RowDefinition Height="Auto"/>
+												<RowDefinition Height="Auto"/>
+												<RowDefinition Height="Auto"/>
+											</Grid.RowDefinitions>
+											<DockPanel Grid.Column="0" LastChildFill="False">
+												<DockPanel DockPanel.Dock="Top">
+													<TextBlock Text="Gross price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+													<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeMinuteItem.GrossPrice, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+													         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+												</DockPanel>
+												<DockPanel DockPanel.Dock="Top">
+													<TextBlock Text="Extra pay" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+													<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeMinuteItem.ExtraPay, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+													         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+												</DockPanel>
+												<DockPanel DockPanel.Dock="Top">
+													<TextBlock Text="VAT (%)" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+													<ComboBox Style="{DynamicResource CommonComboBoxStyle}" Text="{Binding TicketData.TypeMinuteItem.VAT, StringFormat=N0, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+													          Width="100" HorizontalAlignment="Left" ItemsSource="{Binding VatList}" IsEditable="True"/>
+												</DockPanel>
+											</DockPanel>
+
+											<DockPanel Grid.Column="1" LastChildFill="False">
+												<DockPanel DockPanel.Dock="Top">
+													<TextBlock Text="For" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+													<TextBlock Text="minutes" Style="{DynamicResource CommonTextStyle}" MinWidth="80" DockPanel.Dock="Right"/>
+													<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeMinuteItem.ForMinutes, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+													         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+												</DockPanel>
+												<DockPanel DockPanel.Dock="Top">
+													<TextBlock Text="For next" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+													<TextBlock Text="minutes" Style="{DynamicResource CommonTextStyle}" MinWidth="80" DockPanel.Dock="Right"/>
+													<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeMinuteItem.ForNextMinutes, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+													         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+												</DockPanel>
+												<DockPanel DockPanel.Dock="Top">
+													<TextBlock Text="Discount (%)" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+													<ComboBox Style="{DynamicResource CommonComboBoxStyle}" Text="{Binding TicketData.TypeMinuteItem.Discount, StringFormat=N0, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+													          Width="100" HorizontalAlignment="Left" ItemsSource="{Binding VatList}" IsEditable="True"/>
+												</DockPanel>
+											</DockPanel>
+
+											<CheckBox Style="{DynamicResource CommonCheckboxStyle}" Content="Fixed price after exceeding a certain number of minutes"
+											          Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="1" Margin="95,5" IsChecked="{Binding TicketData.TypeMinuteItem.IsFixedPrice}"/>
+											
+											<DockPanel Grid.Row="2" Grid.Column="0" LastChildFill="False" IsEnabled="{Binding TicketData.TypeMinuteItem.IsFixedPrice, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}">
+												<DockPanel DockPanel.Dock="Top">
+													<TextBlock Text="Above" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+													<TextBlock Text="minutes" Style="{DynamicResource CommonTextStyle}" MinWidth="80" DockPanel.Dock="Right"/>
+													<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeMinuteItem.FromMinutesAbove, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+													         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+												</DockPanel>
+											</DockPanel>
+
+											<DockPanel Grid.Row="2" Grid.Column="1" LastChildFill="False" IsEnabled="{Binding TicketData.TypeMinuteItem.IsFixedPrice, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}">
+												<DockPanel DockPanel.Dock="Top">
+													<TextBlock Text="Gross price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+													<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeMinuteItem.GrossPriceAbove, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+													         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+												</DockPanel>
+											</DockPanel>
+										</Grid>
+								</DockPanel>
+								<DockPanel Visibility="{Binding TimerTypeIntervalVisibility, UpdateSourceTrigger=PropertyChanged, FallbackValue=Visible}" LastChildFill="False" Margin="10,0">
+									<Grid>
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition Width="Auto"/>
+											<ColumnDefinition Width="Auto"/>
+											<ColumnDefinition Width="Auto"/>
+										</Grid.ColumnDefinitions>
+
+										<DockPanel Grid.Column="0" LastChildFill="False">
+											<DockPanel DockPanel.Dock="Top" IsEnabled="{Binding TicketData.TypeIntervalItem.ThingA, FallbackValue=true}">
+												<TextBlock Text="From" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+												<TextBlock Text="minutes" Style="{DynamicResource CommonTextStyle}" MinWidth="80" DockPanel.Dock="Right"/>
+												<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeIntervalItem.FromMinutes1, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+												         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint">
+												</TextBox>
+											</DockPanel>
+											<DockPanel DockPanel.Dock="Top" IsEnabled="{Binding TicketData.TypeIntervalItem.ThingB, FallbackValue=true}">
+												<TextBlock Text="From" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+												<TextBlock Text="minutes" Style="{DynamicResource CommonTextStyle}" MinWidth="80" DockPanel.Dock="Right"/>
+												<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeIntervalItem.FromMinutes2, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+												         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+											</DockPanel>
+											<DockPanel DockPanel.Dock="Top" IsEnabled="{Binding TicketData.TypeIntervalItem.ThingC, FallbackValue=true}">
+												<TextBlock Text="From" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+												<TextBlock Text="minutes" Style="{DynamicResource CommonTextStyle}" MinWidth="80" DockPanel.Dock="Right"/>
+												<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeIntervalItem.FromMinutes3, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+												         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+											</DockPanel>
+											<DockPanel DockPanel.Dock="Top"  IsEnabled="{Binding TicketData.TypeIntervalItem.ThingD, FallbackValue=true}">
+												<TextBlock Text="From" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+												<TextBlock Text="minutes" Style="{DynamicResource CommonTextStyle}" MinWidth="80" DockPanel.Dock="Right"/>
+												<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeIntervalItem.FromMinutes4, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+												         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+											</DockPanel>
+											<DockPanel DockPanel.Dock="Top">
+												<TextBlock Text="Above" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+												<TextBlock Text="minutes" Style="{DynamicResource CommonTextStyle}" MinWidth="80" DockPanel.Dock="Right"/>
+												<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeIntervalItem.FromMinutesAbove, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+												         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+											</DockPanel>
+											<DockPanel DockPanel.Dock="Top" Margin="0,10,0,0">
+												<TextBlock Text="VAT (%)" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+												<ComboBox Style="{DynamicResource CommonComboBoxStyle}" Text="{Binding TicketData.TypeIntervalItem.VAT, StringFormat=N0, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+												          Width="100" HorizontalAlignment="Left" ItemsSource="{Binding VatList}" IsEditable="True"/>
+											</DockPanel>
+										</DockPanel>
+
+										<DockPanel Grid.Column="1" LastChildFill="False">
+											<DockPanel DockPanel.Dock="Top" IsEnabled="{Binding TicketData.TypeIntervalItem.ThingA, FallbackValue=true}">
+												<TextBlock Text="Gross Price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+												<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeIntervalItem.GrossPrice1, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+												         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint">
+												</TextBox>
+											</DockPanel>
+											<DockPanel DockPanel.Dock="Top" IsEnabled="{Binding TicketData.TypeIntervalItem.ThingB, FallbackValue=true}">
+												<TextBlock Text="Gross Price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+												<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeIntervalItem.GrossPrice2, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+												         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+											</DockPanel>
+											<DockPanel DockPanel.Dock="Top" IsEnabled="{Binding TicketData.TypeIntervalItem.ThingC, FallbackValue=true}">
+												<TextBlock Text="Gross Price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+												<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeIntervalItem.GrossPrice3, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+												         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+											</DockPanel>
+											<DockPanel DockPanel.Dock="Top" IsEnabled="{Binding TicketData.TypeIntervalItem.ThingD, FallbackValue=true}">
+												<TextBlock Text="Gross Price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+												<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeIntervalItem.GrossPrice4, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+												         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+											</DockPanel>
+											<DockPanel DockPanel.Dock="Top">
+												<TextBlock Text="Gross Price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+												<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeIntervalItem.GrossPriceAbove, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+												         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+											</DockPanel>
+
+											<DockPanel DockPanel.Dock="Top" Margin="0,10,0,0">
+												<TextBlock Text="Discount (%)" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+												<ComboBox Style="{DynamicResource CommonComboBoxStyle}" Text="{Binding TicketData.TypeIntervalItem.Discount, StringFormat=N0, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+												          Width="100" HorizontalAlignment="Left" ItemsSource="{Binding DiscountList}" IsEditable="True"/>
+											</DockPanel>
+										</DockPanel>
+										<DockPanel Grid.Column="2" LastChildFill="False" VerticalAlignment="Top" Margin="20,0,0,0">
+											<CheckBox Style="{DynamicResource CommonCheckboxStyle}" Content="Interval A"
+											          IsChecked="{Binding TicketData.TypeIntervalItem.ThingA}" DockPanel.Dock="Top"/>
+											<CheckBox Style="{DynamicResource CommonCheckboxStyle}" Content="Interval B"
+											          IsChecked="{Binding TicketData.TypeIntervalItem.ThingB}" DockPanel.Dock="Top"/>
+											<CheckBox Style="{DynamicResource CommonCheckboxStyle}" Content="Interval C"
+											          IsChecked="{Binding TicketData.TypeIntervalItem.ThingC}" DockPanel.Dock="Top"/>
+											<CheckBox Style="{DynamicResource CommonCheckboxStyle}" Content="Interval D"
+											          IsChecked="{Binding TicketData.TypeIntervalItem.ThingD}" DockPanel.Dock="Top"/>
+
+										</DockPanel>
+
+									</Grid>
+								</DockPanel>
+								<DockPanel Visibility="{Binding TimerTypeNoLimitVisibility, UpdateSourceTrigger=PropertyChanged, FallbackValue=Collapsed}" LastChildFill="False" Margin="100,0">
+									<DockPanel DockPanel.Dock="Top">
+										<TextBlock Text="Gross price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+										<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding TicketData.TypeNoLimitItem.GrossPrice, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+												 Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+									</DockPanel>
+									<DockPanel DockPanel.Dock="Top">
+										<TextBlock Text="VAT (%)" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+										<ComboBox Style="{DynamicResource CommonComboBoxStyle}" Text="{Binding TicketData.TypeNoLimitItem.VAT, StringFormat=N0, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+												  Width="100" HorizontalAlignment="Left" ItemsSource="{Binding VatList}" IsEditable="True"/>
+									</DockPanel>
+									<DockPanel DockPanel.Dock="Top">
+										<TextBlock Text="Discount (%)" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+										<ComboBox Style="{DynamicResource CommonComboBoxStyle}" Text="{Binding TicketData.TypeNoLimitItem.Discount, StringFormat=N0, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+												  Width="100" HorizontalAlignment="Left" ItemsSource="{Binding DiscountList}" IsEditable="True"/>
+									</DockPanel>
+								</DockPanel>
+							</Grid>
+						</GroupBox>
+						<GroupBox Grid.Row="3" Margin="5" Header="Applies to days">
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="*"/>
+									<ColumnDefinition Width="*"/>
+									<ColumnDefinition Width="*"/>
+								</Grid.ColumnDefinitions>
+								<DockPanel Grid.Column="0" LastChildFill="False" Margin="100,0,0,0">
+									<CheckBox Style="{DynamicResource CommonCheckboxStyle}" Content="Monday"
+									          IsChecked="{Binding TicketData.Monday}" DockPanel.Dock="Top"/>
+									<CheckBox Style="{DynamicResource CommonCheckboxStyle}" Content="Tuesday"
+									          IsChecked="{Binding TicketData.Tuesday}" DockPanel.Dock="Top"/>
+									<CheckBox Style="{DynamicResource CommonCheckboxStyle}" Content="Wednesday"
+									          IsChecked="{Binding TicketData.Wednesday}" DockPanel.Dock="Top"/>
+								</DockPanel>
+								<DockPanel Grid.Column="1" LastChildFill="False" Margin="50,0,0,0">
+									<CheckBox Style="{DynamicResource CommonCheckboxStyle}" Content="Thursday"
+									          IsChecked="{Binding TicketData.Thursday}" DockPanel.Dock="Top"/>
+									<CheckBox Style="{DynamicResource CommonCheckboxStyle}" Content="Friday"
+									          IsChecked="{Binding TicketData.Friday}" DockPanel.Dock="Top"/>
+									<CheckBox Style="{DynamicResource CommonCheckboxStyle}" Content="Saturday"
+									          IsChecked="{Binding TicketData.Saturday}" DockPanel.Dock="Top"/>
+								</DockPanel>
+								<DockPanel Grid.Column="2" LastChildFill="False">
+									<CheckBox Style="{DynamicResource CommonCheckboxStyle}" Content="Sunday"
+									          IsChecked="{Binding TicketData.Sunday}" DockPanel.Dock="Top"/>
+									<CheckBox Style="{DynamicResource CommonCheckboxStyle}" Content="All"
+									          IsChecked="{Binding TicketData.AllDays}" DockPanel.Dock="Top"/>
+								</DockPanel>
+
+							</Grid>
+						</GroupBox>
+					</Grid>
+				</ScrollViewer>
+
+			</Grid>
+		</Border>
+
+</UserControl>

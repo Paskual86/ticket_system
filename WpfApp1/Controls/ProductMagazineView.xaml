@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="TicketSystem.Controls.ProductMagazineView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TicketSystem.Controls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="400">
+    <Border BorderBrush="{DynamicResource TextBoxBorderBrush}" BorderThickness="1" Background="{DynamicResource WindowBackgroundBrush}">
+        <Border.Effect>
+            <DropShadowEffect Opacity=".3"/>
+        </Border.Effect>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" Background="{DynamicResource AccentColorBrush4}">
+                <TextBlock  Text="PRODUCTS - MAGAZINE" Grid.Row="0" Grid.Column="0" Style="{DynamicResource CommonTextStyle}" MinWidth="90"
+			           FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Background="Transparent"/>
+            </Border>
+            <DockPanel Grid.Row="1" LastChildFill="True">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="70"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <TextBox Style="{DynamicResource CommonTextBoxStyle}" 
+                                 HorizontalAlignment="Stretch" 
+                                 Text="{Binding Product.GrossPrice, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+                    </DockPanel>
+                    <DockPanel Grid.Column="2">
+                        <Button Style="{DynamicResource DashButtonStyle}" Height="20" HorizontalAlignment="Right" Command="{Binding SearchCommand}">
+                            <DockPanel>
+                                <iconPacks:PackIconMaterial Kind="SearchWeb" HorizontalAlignment="Stretch" Width="20" Height="20" DockPanel.Dock="Top" 
+								                            Foreground="Green"/>
+                            </DockPanel>
+                        </Button>
+                    </DockPanel>
+                </Grid>
+            </DockPanel>
+            <DockPanel Grid.Row="2">
+                    <ComboBox Style="{DynamicResource CommonComboBoxStyle}" 
+                                  SelectedValue="{Binding Product.CategoryId, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                  DisplayMemberPath="Description"
+                                  SelectedValuePath="Id"
+                                  HorizontalAlignment="Stretch" 
+                                  ItemsSource="{Binding ProductCategories}" IsEditable="False"/>
+            </DockPanel>
+            <DataGrid Grid.Row="3" ItemsSource="{Binding ProductFilteredCollection}" AutoGenerateColumns="False"
+	              SelectedItem="{Binding SelectedProduct, UpdateSourceTrigger=PropertyChanged}"
+				  GotFocus="Grid_OnGotFocus"
+	              CanUserAddRows="False" CanUserResizeRows="False" EnableRowVirtualization="True"
+	              HeadersVisibility="Column" SelectionMode="Single" SelectionUnit="FullRow"
+	              ColumnWidth="*" Margin="5" AlternatingRowBackground="{DynamicResource AccentColorBrush4}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Name}" Header="Product Name" Width="120" IsReadOnly="True"/>
+                    <DataGridTextColumn Binding="{Binding NetPrice, StringFormat=N2}" Header="Net Price" Width="80" IsReadOnly="False" />
+                    <DataGridTextColumn Binding="{Binding Vat.Value}" Header="VAT" Width="70" IsReadOnly="True"/>
+                    <DataGridTextColumn Binding="{Binding GrossPrice, StringFormat=N2}" Header="Gross Price" Width="110" IsReadOnly="True"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Border>
+</UserControl>

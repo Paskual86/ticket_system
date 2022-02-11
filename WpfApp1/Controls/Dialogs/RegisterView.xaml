@@ -1,0 +1,252 @@
+﻿<UserControl x:Class="TicketSystem.Controls.Dialogs.RegisterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TicketSystem.Controls.Dialogs"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:classes="clr-namespace:TicketSystem.Classes"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="800">
+<Border BorderBrush="{DynamicResource TextBoxBorderBrush}" BorderThickness="1" Background="{DynamicResource WindowBackgroundBrush}">
+		<Border.Effect>
+			<DropShadowEffect Opacity=".3"/>
+		</Border.Effect>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="30"/>
+				<RowDefinition Height="60"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+
+			<TextBlock Text="Register" Grid.Row="0" Grid.Column="0" Style="{DynamicResource CommonTextStyle}" MinWidth="80"
+			           FontSize="18" FontWeight="Bold"/>
+
+			<Border Grid.Row="1" Background="{DynamicResource AccentColorBrush4}" Grid.Column="0">
+				<Grid>
+					<DockPanel LastChildFill="False">
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding AcceptCommand}">
+							<DockPanel>
+								<iconPacks:PackIconMaterial Kind="CheckboxMarkedCircle" HorizontalAlignment="Stretch" Width="26" Height="30" DockPanel.Dock="Top" 
+								                            Foreground="Green"/>
+								<TextBlock Text="Accept" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+						<Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding CancelCommand}">
+							<DockPanel>
+								<iconPacks:PackIconMaterial Kind="Cancel" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" 
+								                            Foreground="Red"/>
+								<TextBlock Text="Cancel" HorizontalAlignment="Center" />
+							</DockPanel>
+						</Button>
+					</DockPanel>
+				</Grid>
+			</Border>
+			<ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+								<TextBlock Text="Ticket type" Grid.Row="2" Grid.Column="0" Style="{DynamicResource CommonTextStyle}" MinWidth="80"/>
+			<TextBlock Text="Ticket name" Grid.Row="2" Grid.Column="1" Style="{DynamicResource CommonTextStyle}" MinWidth="80"/>
+
+			<ListBox Grid.Row="3" Grid.Column="0" Margin="5" ItemsSource="{Binding GroupsList}" SelectedItem="{Binding SelectedGroup, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+			         DisplayMemberPath="Name" SelectedValuePath="ID" MinHeight="150" Name="listBox">
+			</ListBox>
+
+			<ListBox Grid.Row="3" Grid.Column="1" Margin="5" ItemsSource="{Binding TicketsList}" SelectedItem="{Binding SelectedTicket, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+			         DisplayMemberPath="Name" SelectedValuePath="ID" SelectedValue="{Binding Item.TicketItemID, UpdateSourceTrigger=PropertyChanged}"
+			         MinHeight="150">
+			</ListBox>
+
+					<TextBlock Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"
+					           Text="There are no tickets available for this day of the week!" FontSize="28" FontWeight="Bold"
+					           Foreground="Red" Visibility="{Binding NoTicketsWarningVisibility, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+
+			<DockPanel Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="0" LastChildFill="False" Margin="45,5">
+				<DockPanel DockPanel.Dock="Top">
+					<TextBlock Text="Entry ID" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="100"/>
+					<ComboBox Style="{DynamicResource CommonComboBoxStyle}" Text="{Binding Item.EntryID, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+					          IsEditable="True" ItemsSource="{Binding ItemsList}"/>
+				</DockPanel>
+				<DockPanel DockPanel.Dock="Top">
+					<TextBlock Text="Deposit $" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="100"/>
+					<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding Item.Deposit, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+					         Width="150" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+				</DockPanel>
+				<DockPanel DockPanel.Dock="Top" LastChildFill="False">
+					<DockPanel DockPanel.Dock="Left">
+						<TextBlock Text="Payment method" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="100"/>
+						<ComboBox Style="{DynamicResource CommonComboBoxStyle}" SelectedValue="{Binding Item.PaymentMethod, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+						         DisplayMemberPath="Key" SelectedValuePath="Value" Width="150" ItemsSource="{Binding PaymentMethodsList}"/>
+					</DockPanel>
+					<DockPanel DockPanel.Dock="Top">
+						<TextBlock Text="Number of tickets" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="100"/>
+						<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding Item.NumberOfTickets, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+						         Width="150" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+					</DockPanel>
+
+				</DockPanel>
+			</DockPanel>
+
+			<DockPanel Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="0" LastChildFill="False" Margin="155,5">
+				<CheckBox Style="{DynamicResource CommonCheckboxStyle}" Content="permission for the child to take drinks independently"
+						  IsChecked="{Binding Item.PermForChildDrinks}" DockPanel.Dock="Top"/>
+				<CheckBox Style="{DynamicResource CommonCheckboxStyle}" Content="permission for the child to take food for himself"
+						  IsChecked="{Binding Item.PermForChildFood}" DockPanel.Dock="Top"/>
+			</DockPanel>
+
+			<GroupBox Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="0" Margin="5"
+			          Header="Ticket details">
+				<DockPanel LastChildFill="False" IsEnabled="False">
+					<DockPanel DockPanel.Dock="Top">
+						<TextBlock Text="Calculating time type" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="120"/>
+						<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding SelectedTicket.TimeTypeText, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+					</DockPanel>
+					<DockPanel DockPanel.Dock="Top" LastChildFill="False" Visibility="{Binding RegisterMinutesVisibility, FallbackValue=Collapsed}">
+						<DockPanel DockPanel.Dock="Top" LastChildFill="False">
+							<DockPanel DockPanel.Dock="Left">
+								<TextBlock Text="Gross price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="120"/>
+								<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding SelectedTicket.GrossPrice, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+								         Width="150"/>
+							</DockPanel>
+							<DockPanel DockPanel.Dock="Top" LastChildFill="False">
+								<TextBlock Text="For" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="70"/>
+								<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding SelectedTicket.ForMinutes, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+								         Width="150" HorizontalAlignment="Left"/>
+								<TextBlock Text="minutes" Style="{DynamicResource CommonTextStyle}" MinWidth="80"/>
+							</DockPanel>
+						</DockPanel>
+						<DockPanel DockPanel.Dock="Top" LastChildFill="False">
+							<DockPanel DockPanel.Dock="Left">
+								<TextBlock Text="Extra pay" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="120"/>
+								<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding SelectedTicket.ExtraPay, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+								         Width="150"/>
+							</DockPanel>
+							<DockPanel DockPanel.Dock="Top" LastChildFill="False">
+								<TextBlock Text="For next" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="70"/>
+								<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding SelectedTicket.ForNext, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+								         Width="150" HorizontalAlignment="Left"/>
+								<TextBlock Text="minutes" Style="{DynamicResource CommonTextStyle}" MinWidth="80"/>
+							</DockPanel>
+						</DockPanel>
+					</DockPanel>
+					<DockPanel DockPanel.Dock="Top" LastChildFill="False" Visibility="{Binding RegisterIntervalVisibility, FallbackValue=Collapsed}">
+						<Grid Margin="40,0,0,0">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto"/>
+								<ColumnDefinition Width="Auto"/>
+							</Grid.ColumnDefinitions>
+
+							<DockPanel Grid.Column="0" LastChildFill="False">
+								<DockPanel DockPanel.Dock="Top" Visibility="{Binding SelectedTicket.TypeIntervalItem.ThingA, FallbackValue=Visible, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}">
+									<TextBlock Text="From" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+									<TextBlock Text="minutes" Style="{DynamicResource CommonTextStyle}" MinWidth="80" DockPanel.Dock="Right"/>
+									<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding SelectedTicket.TypeIntervalItem.FromMinutes1, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+												Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint">
+									</TextBox>
+								</DockPanel>
+								<DockPanel DockPanel.Dock="Top" Visibility="{Binding SelectedTicket.TypeIntervalItem.ThingB, FallbackValue=Visible, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}">
+									<TextBlock Text="From" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+									<TextBlock Text="minutes" Style="{DynamicResource CommonTextStyle}" MinWidth="80" DockPanel.Dock="Right"/>
+									<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding SelectedTicket.TypeIntervalItem.FromMinutes2, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+												Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+								</DockPanel>
+								<DockPanel DockPanel.Dock="Top" Visibility="{Binding SelectedTicket.TypeIntervalItem.ThingC, FallbackValue=Visible, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}">
+									<TextBlock Text="From" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+									<TextBlock Text="minutes" Style="{DynamicResource CommonTextStyle}" MinWidth="80" DockPanel.Dock="Right"/>
+									<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding SelectedTicket.TypeIntervalItem.FromMinutes3, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+												Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+								</DockPanel>
+								<DockPanel DockPanel.Dock="Top"  Visibility="{Binding SelectedTicket.TypeIntervalItem.ThingD, FallbackValue=Visible, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}">
+									<TextBlock Text="From" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+									<TextBlock Text="minutes" Style="{DynamicResource CommonTextStyle}" MinWidth="80" DockPanel.Dock="Right"/>
+									<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding SelectedTicket.TypeIntervalItem.FromMinutes4, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+												Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+								</DockPanel>
+								<DockPanel DockPanel.Dock="Top">
+									<TextBlock Text="Above" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+									<TextBlock Text="minutes" Style="{DynamicResource CommonTextStyle}" MinWidth="80" DockPanel.Dock="Right"/>
+									<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding SelectedTicket.TypeIntervalItem.FromMinutesAbove, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+												Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+								</DockPanel>
+								<DockPanel DockPanel.Dock="Top" Margin="0,10,0,0">
+									<TextBlock Text="VAT (%)" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+									<ComboBox Style="{DynamicResource CommonComboBoxStyle}" Text="{Binding SelectedTicket.TypeIntervalItem.VAT, StringFormat=N0, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+												Width="100" HorizontalAlignment="Left" IsEditable="True"/>
+								</DockPanel>
+							</DockPanel>
+
+							<DockPanel Grid.Column="1" LastChildFill="False">
+								<DockPanel DockPanel.Dock="Top" Visibility="{Binding SelectedTicket.TypeIntervalItem.ThingA, FallbackValue=Visible, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}">
+									<TextBlock Text="Gross Price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+									<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding SelectedTicket.TypeIntervalItem.GrossPrice1, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+												Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint">
+									</TextBox>
+								</DockPanel>
+								<DockPanel DockPanel.Dock="Top" Visibility="{Binding SelectedTicket.TypeIntervalItem.ThingB, FallbackValue=Visible, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}">
+									<TextBlock Text="Gross Price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+									<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding SelectedTicket.TypeIntervalItem.GrossPrice2, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+												Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+								</DockPanel>
+								<DockPanel DockPanel.Dock="Top" Visibility="{Binding SelectedTicket.TypeIntervalItem.ThingC, FallbackValue=Visible, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}">
+									<TextBlock Text="Gross Price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+									<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding SelectedTicket.TypeIntervalItem.GrossPrice3, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+												Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+								</DockPanel>
+								<DockPanel DockPanel.Dock="Top" Visibility="{Binding SelectedTicket.TypeIntervalItem.ThingD, FallbackValue=Visible, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}">
+									<TextBlock Text="Gross Price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+									<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding SelectedTicket.TypeIntervalItem.GrossPrice4, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+												Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+								</DockPanel>
+								<DockPanel DockPanel.Dock="Top">
+									<TextBlock Text="Gross Price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+									<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding SelectedTicket.TypeIntervalItem.GrossPriceAbove, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+												Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+								</DockPanel>
+
+								<DockPanel DockPanel.Dock="Top" Margin="0,10,0,0">
+									<TextBlock Text="Discount (%)" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+									<ComboBox Style="{DynamicResource CommonComboBoxStyle}" Text="{Binding SelectedTicket.TypeIntervalItem.Discount, StringFormat=N0, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+												Width="100" HorizontalAlignment="Left" IsEditable="True"/>
+								</DockPanel>
+							</DockPanel>
+						</Grid>
+					</DockPanel>
+					<DockPanel DockPanel.Dock="Top" LastChildFill="False" Visibility="{Binding RegisterNoLimitVisibility, FallbackValue=Visible}"
+					           Margin="40,0,0,0">
+						<DockPanel DockPanel.Dock="Left">
+							<TextBlock Text="Gross price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+							<TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding SelectedTicket.TypeNoLimitItem.GrossPrice, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+							         Width="100" HorizontalAlignment="Left" classes:TextBoxHelper.OnlyNumeric="Uint"/>
+						</DockPanel>
+						<DockPanel DockPanel.Dock="Left">
+							<TextBlock Text="VAT (%)" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+							<ComboBox Style="{DynamicResource CommonComboBoxStyle}" Text="{Binding SelectedTicket.TypeNoLimitItem.VAT, StringFormat=N0, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+							          Width="100" HorizontalAlignment="Left" IsEditable="True"/>
+						</DockPanel>
+						<DockPanel DockPanel.Dock="Left">
+							<TextBlock Text="Discount (%)" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="80"/>
+							<ComboBox Style="{DynamicResource CommonComboBoxStyle}" Text="{Binding SelectedTicket.TypeNoLimitItem.Discount, StringFormat=N0, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"
+							          Width="100" HorizontalAlignment="Left" IsEditable="True"/>
+						</DockPanel>
+					</DockPanel>
+				</DockPanel>
+			</GroupBox>
+				</Grid>
+			</ScrollViewer>
+
+
+		</Grid>
+	</Border>
+</UserControl>

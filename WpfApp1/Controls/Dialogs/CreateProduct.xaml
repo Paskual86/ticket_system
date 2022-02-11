@@ -1,0 +1,137 @@
+﻿<UserControl x:Class="TicketSystem.Controls.Dialogs.CreateProduct"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+             VerticalAlignment="Center"
+        Width="500" d:DesignHeight="350">
+    <Border BorderBrush="{DynamicResource TextBoxBorderBrush}" BorderThickness="1" Background="{DynamicResource WindowBackgroundBrush}">
+        <Border.Effect>
+            <DropShadowEffect Opacity=".3"/>
+        </Border.Effect>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="New Product" Grid.Row="0" Grid.Column="0" Style="{DynamicResource CommonTextStyle}" MinWidth="90"
+			           FontSize="18" FontWeight="Bold"/>
+
+            <Border Grid.Row="1" Background="{DynamicResource AccentColorBrush4}">
+                <Grid>
+                    <DockPanel LastChildFill="False">
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding AcceptCommand}">
+                            <DockPanel>
+                                <iconPacks:PackIconMaterial Kind="CheckboxMarkedCircle" HorizontalAlignment="Stretch" Width="26" Height="30" DockPanel.Dock="Top" 
+								                            Foreground="Green"/>
+                                <TextBlock Text="Accept" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Left" Command="{Binding CancelCommand}">
+                            <DockPanel>
+                                <iconPacks:PackIconMaterial Kind="Cancel" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" 
+								                            Foreground="Red"/>
+                                <TextBlock Text="Cancel" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+                        <Button Style="{DynamicResource DashButtonStyle}" DockPanel.Dock="Right" Command="{Binding DashboardCommand}" CommandParameter="14">
+                            <DockPanel>
+                                <iconPacks:PackIconFontAwesome Kind="InfoCircleSolid" HorizontalAlignment="Stretch" Width="30" Height="30" DockPanel.Dock="Top" />
+                                <TextBlock Text="Help" HorizontalAlignment="Center" />
+                            </DockPanel>
+                        </Button>
+
+                    </DockPanel>
+                </Grid>
+            </Border>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <DockPanel Grid.Row="0" Grid.ColumnSpan="2" LastChildFill="False" Margin="15,15,15, 0">
+                    <DockPanel DockPanel.Dock="Top">
+                        <TextBlock Text="Product Code" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="90"/>
+                        <TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding Product.Code, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+						         Name="textBox"/>
+                    </DockPanel>
+                    <DockPanel DockPanel.Dock="Top">
+                        <TextBlock Text="Product Name" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="90"/>
+                        <TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding Product.Name, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+                    </DockPanel>
+                    <DockPanel DockPanel.Dock="Top">
+                        <TextBlock Text="Net Price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="90"/>
+                        <TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding Product.NetPrice, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+                    </DockPanel>
+                    <DockPanel DockPanel.Dock="Top">
+                        <TextBlock Text="VAT Rate" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="90"/>
+                        <ComboBox Style="{DynamicResource CommonComboBoxStyle}" 
+                                  SelectedValue="{Binding Product.VatId, UpdateSourceTrigger=PropertyChanged,  Mode=TwoWay}"
+						          DisplayMemberPath="Value" 
+                                  SelectedValuePath="Id" 
+                                  HorizontalAlignment="Left"
+                                  Width="100" ItemsSource="{Binding VatList}"/>
+
+                    </DockPanel>
+                    <DockPanel DockPanel.Dock="Top">
+                        <TextBlock Text="Gross price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="90"/>
+                        <TextBox Style="{DynamicResource CommonTextBoxStyle}" 
+                                 Width="100" 
+                                 HorizontalAlignment="Left" 
+                                 Text="{Binding Product.GrossPrice, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+                    </DockPanel>
+                    <DockPanel DockPanel.Dock="Top">
+                        <TextBlock Text="Category" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="90"/>
+                        <ComboBox Style="{DynamicResource CommonComboBoxStyle}" 
+                                  SelectedValue="{Binding Product.CategoryId, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                  DisplayMemberPath="Description"
+                                  SelectedValuePath="Id"
+                                  Width="150" 
+                                  HorizontalAlignment="Left" 
+                                  ItemsSource="{Binding ProductCategories}" IsEditable="True"/>
+
+                    </DockPanel>
+                </DockPanel>
+
+                <DockPanel Grid.Row="3" Grid.Column="0" LastChildFill="False" Margin="15,5,0,0">
+                    <DockPanel DockPanel.Dock="Top">
+                        <TextBlock Text="Net purchase price" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="90"/>
+                        <TextBox Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding Product.NetPurchasePrice, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"
+						         MaxLength="10"/>
+                    </DockPanel>
+                </DockPanel>
+
+                <DockPanel Grid.Row="3" Grid.Column="1" LastChildFill="False" Margin="15,5,15,0">
+                    <DockPanel DockPanel.Dock="Top">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+
+                        <TextBlock Grid.Column="0" Text="Comision" Style="{DynamicResource CommonTextRightAlignStyle}" MinWidth="90"/>
+                        <TextBox Grid.Column="1" Width="90" Style="{DynamicResource CommonTextBoxStyle}" Text="{Binding Product.Comision, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ValidatesOnDataErrors=True, NotifyOnValidationError=True}"/>
+                        <TextBlock Grid.Column="2" HorizontalAlignment="Right" Text="%" Style="{DynamicResource CommonTextRightAlignStyle}" Width="10" MinWidth="10"/>
+                    </DockPanel>
+                </DockPanel>
+            </Grid>
+
+        </Grid>
+    </Border>
+</UserControl>

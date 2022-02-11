@@ -1,0 +1,20 @@
+﻿TicketSystem
+
+
+winexe
+C#
+.cs
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\obj\Debug\
+TicketSystem
+none
+false
+DEBUG;TRACE
+D:\Backup Disco D\Development\AzureDevOps\NyPSoftware\ticket_system\WpfApp1\App.xaml
+24925993052
+
+66-1192782713
+1372132543717
+Controls\BarEditView.xaml;Controls\Dialogs\CreateItemView.xaml;Controls\Dialogs\CreateMagazineDocument.xaml;Controls\Dialogs\CreateProduct.xaml;Controls\Dialogs\CreateProductMagazine.xaml;Controls\Dialogs\CreateUserView.xaml;Controls\Dialogs\CreateTicketGroupView.xaml;Controls\Dialogs\CreateTicketView.xaml;Controls\Dialogs\RegisterView.xaml;Controls\Dialogs\SelectedProductQuantity.xaml;Controls\MagazineView.xaml;Controls\MainView.xaml;Controls\ItemsView.xaml;Controls\ChartsView.xaml;Controls\ProductMagazineView.xaml;Controls\ProductView.xaml;Controls\SaleProductBuyView.xaml;Controls\WorkTimesView.xaml;Controls\UsersView.xaml;Controls\TicketGroupsView.xaml;Controls\TicketsView.xaml;MainWindow.xaml;Styles\ControlStyles.xaml;Styles\StyleOverrides.xaml;
+
+False
+
